@@ -1,3 +1,6 @@
+import java.math.BigDecimal;
+import java.math.MathContext;
+import java.math.RoundingMode;
 import java.util.Random;
 
 public class FirstClass {
@@ -16,6 +19,21 @@ public class FirstClass {
 //      int randomNumber = (int) (Math.random()*100);
 //
 //      System.out.println(randomNumber + "\nThe number is even? : \n" + (randomNumber % 2==0));
-        
+
+
+        BigDecimal priceBD = new BigDecimal("9.99");
+        priceBD = (priceBD.subtract(priceBD.multiply(new BigDecimal("0.23")))).setScale(2,RoundingMode.HALF_EVEN);
+        System.out.println(priceBD);
+        priceBD = priceBD.multiply(new BigDecimal(10000)).setScale(2,RoundingMode.HALF_EVEN);
+        System.out.println(priceBD.divide(new BigDecimal("0.77"),2,RoundingMode.HALF_EVEN));
+
+        System.out.println("double");
+        double priceD = 9.99;
+        System.out.println(priceD-priceD*0.23);
+        double priceDAfterVAT = (priceD-priceD*0.23)*10000;
+        System.out.println(priceDAfterVAT+priceDAfterVAT*0.23);
+
+
+
     }
 }
