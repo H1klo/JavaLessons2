@@ -22,17 +22,18 @@ public class FirstClass {
 
 
         BigDecimal priceBD = new BigDecimal("9.99");
-        priceBD = (priceBD.subtract(priceBD.multiply(new BigDecimal("0.23")))).setScale(2,RoundingMode.HALF_EVEN);
-        System.out.println(priceBD);
+        priceBD = (priceBD.add(priceBD.multiply(new BigDecimal(0.23)))).setScale(2,RoundingMode.HALF_EVEN);
+        System.out.println("price with tax: " + priceBD);
         priceBD = priceBD.multiply(new BigDecimal(10000)).setScale(2,RoundingMode.HALF_EVEN);
-        System.out.println(priceBD.divide(new BigDecimal("0.77"),2,RoundingMode.HALF_EVEN));
+        System.out.println("10000 items with tax: " + priceBD);
+        priceBD = priceBD.subtract(priceBD.multiply(new BigDecimal(0.23))).setScale(2,RoundingMode.HALF_EVEN);
+        System.out.println("10000 items without tax: " + priceBD);
 
         System.out.println("double");
         double priceD = 9.99;
-        System.out.println(priceD-priceD*0.23);
-        double priceDAfterVAT = (priceD-priceD*0.23)*10000;
-        System.out.println(priceDAfterVAT+priceDAfterVAT*0.23);
-
+        System.out.println("price with tax: "+ (priceD+priceD*0.23));
+        double priceDAfterVAT = (priceD+priceD*0.23)*10000;
+        System.out.println("10000 items without tax: " +(priceDAfterVAT-priceDAfterVAT*0.23));
 
 
     }
