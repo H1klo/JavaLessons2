@@ -1,10 +1,13 @@
+import java.awt.geom.Arc2D;
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.math.RoundingMode;
 import java.util.Random;
+import java.util.Scanner;
 
 public class FirstClass {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 //        float mass = 83.0f;
 //        double marsMass = mass*0.38f;
 //        System.out.printf("%.1f kg on Earth is kg %.4f on Mars\n", mass,marsMass);
@@ -20,20 +23,18 @@ public class FirstClass {
 //
 //      System.out.println(randomNumber + "\nThe number is even? : \n" + (randomNumber % 2==0));
 
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Enter the first number");
+//        float firstNumber = Float.parseFloat(scanner.nextLine()) ;
+//        System.out.println("Enter the second number");
+//        float secondNumber =Float.parseFloat(scanner.nextLine()) ;
+//
+//        System.out.println(firstNumber +" + "+secondNumber+" = "+ (firstNumber+secondNumber));
+//        System.out.println(firstNumber + " - "+secondNumber+" = "+ (firstNumber-secondNumber));
+//        System.out.println(firstNumber+" * "+secondNumber+" = "+ (firstNumber*secondNumber));
+//        System.out.println(firstNumber+" / "+secondNumber+" = "+ (firstNumber/secondNumber));
 
-        BigDecimal priceBD = new BigDecimal("9.99");
-        priceBD = (priceBD.add(priceBD.multiply(new BigDecimal(0.23)))).setScale(2,RoundingMode.HALF_EVEN);
-        System.out.println("price with tax: " + priceBD);
-        priceBD = priceBD.multiply(new BigDecimal(10000)).setScale(2,RoundingMode.HALF_EVEN);
-        System.out.println("10000 items with tax: " + priceBD);
-        priceBD = priceBD.subtract(priceBD.multiply(new BigDecimal(0.23))).setScale(2,RoundingMode.HALF_EVEN);
-        System.out.println("10000 items without tax: " + priceBD);
 
-        System.out.println("double");
-        double priceD = 9.99;
-        System.out.println("price with tax: "+ (priceD+priceD*0.23));
-        double priceDAfterVAT = (priceD+priceD*0.23)*10000;
-        System.out.println("10000 items without tax: " +(priceDAfterVAT-priceDAfterVAT*0.23));
 
 
     }
