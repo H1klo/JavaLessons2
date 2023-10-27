@@ -1,3 +1,5 @@
+package lab3;
+
 import java.util.Random;
 
 public class Min_Max_random {
@@ -10,7 +12,7 @@ public class Min_Max_random {
              temp = random.nextInt(1,100);
              System.out.print(temp+ ", ");
              if (temp<min ) min = temp;
-             else if (temp>max) max = temp;
+             if (temp>max) max = temp;
 
              i++;
          }

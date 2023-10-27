@@ -1,3 +1,5 @@
+package lab3;
+
 import java.awt.geom.Arc2D;
 import java.io.IOException;
 import java.math.BigDecimal;

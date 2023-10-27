@@ -1,3 +1,5 @@
+package lab3;
+
 import java.util.Scanner;
 
 public class Elements_square_equtaion {
