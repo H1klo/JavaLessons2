@@ -6,13 +6,11 @@ public class Matrix10x10 {
         int number = 0;
         int sum = 0;
         for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
+            for (int j = 0; j < matrix[i].length; j++,number++) {
                 if (i == j) {
                     matrix[i][j] = number;
                     sum += number;
-                    number++;
-                } else {
-                    matrix[i][j] = 0;
+
                 }
                 System.out.print(matrix[i][j] + " ");
             }
